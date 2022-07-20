@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>User DB</title>
+</head>
+
+<body>
+<a th:href="@{/admin}"> >Check Admin rights< </a>
+
+<th:block th:each="message : ${helloMessage}">
+    <h3 th:text="${message}"></h3>
+</th:block>
+
+    <h3>Users List</h3>
+    <br/>
+    <a th:href="@{/new}" class="btn btn-primary btn-sm mb-3"> Add User </a>
+    <br><br>
+
+    <div th:each="user : ${users}">
+        <a th:href="@{user/{id}(id = ${user.getId()})}" th:text="${user.getFirstName() + ' ' + user.getLastName()}">user</a>
+        <br><br>
+    </div>
+<a href="#" th:href="@{/logout}">Log Out</a>
+</body>
+</html>

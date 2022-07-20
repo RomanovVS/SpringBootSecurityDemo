@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" lang="en">
+<head>
+    <title>Spring Security Example</title>
+</head>
+<body>
+<h3>Information for all Users</h3>
+<p th:text="${user.getId()}">...</p>
+<p th:text="${user.getFirstName()}">...</p>
+<p th:text="${user.getLastName()}">...</p>
+<p th:text="${user.getUsername()}">...</p>
+<p th:text="${user.getPassword()}">...</p>
+</body>
+</html>
